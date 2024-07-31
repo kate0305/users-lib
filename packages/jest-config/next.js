@@ -2,12 +2,7 @@
  * @typedef {import('jest').Config} JestConfig
  */
 
-const nextJest = require('next/jest');
 const baseJest = require('./base');
-
-const createJestConfig = nextJest({
-  dir: './',
-});
 
 /** @type JestConfig */
 const config = {
