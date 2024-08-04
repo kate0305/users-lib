@@ -3,6 +3,7 @@
   "globalDependencies": [
     "**/.env.*local"
   ],
+  // "globalEnv": ["VITE_IMGBB_API_KEY"],
   "tasks": {
     "dev": {
       "cache": false,
@@ -10,11 +11,9 @@
     },
     "build": {
       "dependsOn": ["^build"],
-      "outputs": [
-        "build/**", 
-        ".vercel/**", 
-        "dist/**"
-      ]
+      // "inputs": ["$TURBO_DEFAULT$", ".env*"],
+      "env": ["VITE_IMGBB_API_KEY"],
+      "outputs": ["build/**", ".vercel/**", "dist/**"]
     },
     "lint": {},
     "test": {},

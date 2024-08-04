@@ -13,8 +13,18 @@ const project = resolve(process.cwd(), 'tsconfig.json');
  * @type {import("eslint").Linter.Config}
  */
 module.exports = {
-  extends: ['./base.js'],
-  plugins: ['only-warn'],
+  root: true,
+  env: { browser: true, es2020: true },
+  extends: [
+    './base.js',
+    // 'plugin:@typescript-eslint/strict-type-checked',
+    // 'plugin:@typescript-eslint/stylistic-type-checked',
+    'plugin:react/recommended',
+    'plugin:react-hooks/recommended',
+    'plugin:react/jsx-runtime',
+  ],
+  parser: '@typescript-eslint/parser',
+  plugins: ['react-refresh'],
   globals: {
     React: true,
     JSX: true,
@@ -30,5 +40,13 @@ module.exports = {
     },
   },
   ignorePatterns: ['.*.js', 'node_modules/', 'dist/'],
+  plugins: ['react-refresh'],
+  rules: {
+    'react-refresh/only-export-components': [
+      'warn',
+      { allowConstantExport: true },
+    ],
+  },
   overrides: [{ files: ['*.js?(x)', '*.ts?(x)'] }],
 };
+

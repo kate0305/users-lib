@@ -1,0 +1,19 @@
+.wrapper {
+  max-width: 1440px;
+  width: 100%;
+  min-height: calc(100dvh - 64px);
+  margin: 0 auto;
+  padding: var(--gap-40);
+
+  :global(h1.ant-typography) {
+    color: var(--base-dark);
+    font-weight: 700;
+    @media (max-width: 486px) {
+      font-size: var(--font-size-xl);
+    }
+  }
+
+  @media (max-width: 486px) {
+    padding: var(--gap-20);
+  }
+}
