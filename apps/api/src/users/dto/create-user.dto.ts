@@ -41,7 +41,6 @@ export class CreateUserDto {
   residence: string;
 
   @IsOptional()
-  @IsNotEmpty()
   @IsString()
   photo: string | null;
 }
