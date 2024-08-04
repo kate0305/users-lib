@@ -1,0 +1,21 @@
+.wrapper {
+  border-radius: 20px;
+
+}
+
+.info {
+  margin-left: var(--gap-20);
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  color: var(--base-gray);
+}
+
+.name {
+  font-weight: 500;
+  font-size: var(--font-size-big-title);
+  text-transform: capitalize;
+  color: var(--base-gray);
+}
